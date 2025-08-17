@@ -5,7 +5,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=3
+@id=4
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
@@ -14,8 +14,28 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "PostalCode": "x",
-  "ContactEmail": "y"
+  "name": "Test Name",
+  "description": "Test Description",
+  "category": "Mexican",
+  "hasDelivery": true,
+  "city": "Metropolis",
+  "street": "456 Gourmet Avenue",
+  "postalCode": "54-321"
 }
 
+###
+
+@id=5
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+
+###
+
+@id=4
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Content-Type: application/json
+{
+  "contactemail": "teste@gmail.com"
+
+
+}
 ###
