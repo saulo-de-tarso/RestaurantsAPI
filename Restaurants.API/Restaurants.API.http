@@ -30,11 +30,12 @@ DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
 
-@id=4
+@id=6
 PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 Content-Type: application/json
 {
-  "contactemail": "teste@gmail.com"
+  "Name": "Teste patch",
+  "Description": "Teste"
 
 
 }
