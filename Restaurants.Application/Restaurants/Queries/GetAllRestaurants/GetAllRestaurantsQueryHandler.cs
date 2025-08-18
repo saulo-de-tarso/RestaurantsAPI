@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Restaurants.Application.Restaurants.Dtos;
-using Restaurants.Domain.Respositories;
+using Restaurants.Domain.Repositories;
 
 namespace Restaurants.Application.Restaurants.Queries.GetAllRestaurants;
 

@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Restaurants.Domain.Entities;
-using Restaurants.Domain.Respositories;
+using Restaurants.Domain.Repositories;
 
 namespace Restaurants.Application.Restaurants.Commands.CreateRestaurant;
 
