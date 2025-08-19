@@ -1,7 +1,9 @@
 @Restaurants.API_HostAddress = https://localhost:7207
+@token = JydkT2KHKBmCDnyFJ20u1Mx50VWCqdD8XMKfdhUhkhf2ZyWoiHKyReCFlZi0RjryiaqxmeuodvUFir49UVD96RhHaIXfmGi54eD6fR1NSpA1VVT0aNwf5YXw6t65V6DMyvc3BT4hc3roY
 
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants
+GET {{Restaurants.API_HostAddress}}/api/restaurants?pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Descending
+Authorization: Bearer {{token}}
 
 ###
 
@@ -67,3 +69,19 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes/4
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes/
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+{
+  "email": "testuser@test.com",
+  "password": "Password1!"
+}

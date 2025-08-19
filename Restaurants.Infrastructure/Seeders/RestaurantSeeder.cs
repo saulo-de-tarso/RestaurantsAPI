@@ -1,4 +1,5 @@
-﻿using Restaurants.Domain.Entities;
+﻿using Microsoft.AspNetCore.Identity;
+using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Persistence;
 
 namespace Restaurants.Infrastructure.Seeders;
@@ -17,6 +18,9 @@ internal class RestaurantSeeder(RestaurantsDbContext dbContext) : IRestaurantSee
             }
         }
     }
+
+    
+
 
     private IEnumerable<Restaurant> GetRestaurants()
     {
