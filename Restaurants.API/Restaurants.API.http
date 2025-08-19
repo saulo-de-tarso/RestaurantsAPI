@@ -5,7 +5,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=55
+@id=3
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
@@ -39,4 +39,31 @@ Content-Type: application/json
 
 
 }
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes
+Content-Type: application/json
+
+{
+  "Name": "Spaghetti Bolognese",
+  "Description": "Classic Italian pasta dish with rich meat sauce",
+  "Price": 12.99,
+  "KiloCalories": 750
+  
+}
+
+###
+
+@restaurantId=1
+GET {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
+
+###
+
+@dishId=3
+GET {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes/4
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1/dishes/
+
 ###
