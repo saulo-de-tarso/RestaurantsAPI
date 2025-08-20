@@ -30,6 +30,7 @@ public static class WebApplicationBuilderExtensions
                 });
         });
 
+
         builder.Services.AddScoped<ErrorHandlingMiddleware>();
         builder.Services.AddScoped<TimeLoggingMiddleware>();
 
